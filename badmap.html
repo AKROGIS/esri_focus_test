@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title>Accessibility Test</title>
+  <!-- <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.10/js/esri/css/esri.css"> -->
+  <style>
+    html, body, #map {
+      padding:0;
+      margin:0;
+      height:100%;
+    }
+  </style>
+  <script src="//js.arcgis.com/3.10/"></script>
+  <script>
+
+    require([
+      "esri/map", 
+      "dojo/domReady!"
+    ], function(
+      Map
+    )  {
+
+      var map = new Map("map", {
+        center: [-56.049, 38.485],
+        zoom: 3,
+        basemap: "streets"
+      });
+            
+    });
+  </script>
+</head>
+<body>
+<div id="toc">
+  <p>Disabing esri stylesheet <a href="http://js.arcgis.com/3.10/js/esri/css/esri.css">http://js.arcgis.com/3.10/js/esri/css/esri.css</a>
+    restores proper default browser focus highlight behavior</p>
+  <p>Links to <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html">WCAG 2.4.7</a></p>
+  <p>Link to <a href="http://www.esri.com">Esri</a></p>
+</div>
+  <div id="map" class="map">
+    <div id="HomeButton"></div>
+  </div>
+</body>
+</html>
